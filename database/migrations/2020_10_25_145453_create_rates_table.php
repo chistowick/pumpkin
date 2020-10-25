@@ -18,8 +18,6 @@ class CreateRatesTable extends Migration
             $table->string('date');
             $table->string('name');
             $table->string('rate');
-            $table->timestamps();
-            $table->unique(['date', 'name']);
         });
     }
 

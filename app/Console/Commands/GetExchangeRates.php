@@ -65,7 +65,7 @@ class GetExchangeRates extends Command
             // Обращаемся к БД
             $rates_coll = Rate::select('name', 'rate')
                 ->where('date', $today)
-                ->get()->reverse();
+                ->get();
 
             if ($rates_coll->isNotEmpty()) { // Если в БД уже есть записи на сегодня, но в Redis их по какой-то причине нет
 
